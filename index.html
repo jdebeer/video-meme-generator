@@ -1,0 +1,58 @@
+<html>
+
+<head>
+	<style>
+
+	</style>
+</head>
+
+<body
+	style="display: flex; align-items: center;"
+	>
+	<div 
+		class="video-meme-container"
+		style="width: 90%; margin: 0 auto;"
+		>
+
+		<h3 style="margin: 20px auto; text-align: center;">(Hit the space bar to play/pause)</h3>
+
+		<video
+			style="width: 100%; height: auto;"
+			id="mainVideo"
+			>
+			<source 
+				src="https://videos.contentful.com/y42supwwfuy1/70e2kKu9kQMMySiwigaIC/0cbf0dc29575eeb5917bed33c892ee98/SBG_Old_School_Clip_1.mp4" 
+				type="video/mp4"
+				>
+		</video>
+		<div>
+			<img src="too-funny-bar-branding-white.png" style="width: 100%;">
+		</div>
+	</div>
+</body>
+
+<script>
+
+	var vid = document.getElementById("mainVideo"); 
+	var vidPlaying = false;
+
+	document.body.onkeyup = function(e){
+	    if(e.keyCode == 32){
+	        //your code
+	        vidPlaying ? pauseVid() : playVid();
+	    }
+	}
+
+	function playVid() { 
+	    vid.play(); 
+	    vidPlaying = true;
+	} 
+
+	function pauseVid() { 
+	    vid.pause(); 
+	    vidPlaying = false;
+	}
+
+</script>
+
+</html>
